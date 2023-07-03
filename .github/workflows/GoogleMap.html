@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Website Title</title>
+  <style>
+    #map {
+      height: 400px; /* Adjust the height as per your preference */
+      width: 100%; /* Adjust the width as per your preference */
+    }
+  </style>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+  <script>
+    function initMap() {
+      var rajarampuri = {lat: 16.7086, lng: 74.2433}; // Coordinates for Rajarampuri, Kolhapur, Maharashtra
+      
+      var map = new google.maps.Map(document.getElementById('map'), {
+        center: rajarampuri,
+        zoom: 15 // Adjust the zoom level as per your preference
+      });
+      
+      var marker = new google.maps.Marker({
+        position: rajarampuri,
+        map: map,
+        title: 'Rajarampuri, Kolhapur, Maharashtra' // Tooltip text for the marker
+      });
+    }
+  </script>
+</head>
+<body>
+  <!-- Your website content -->
+  
+  <h2>Location</h2>
+  <div id="map"></div>
+  
+  <!-- Additional website content -->
+  
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+</body>
+</html>
